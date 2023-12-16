@@ -1,0 +1,52 @@
+<!doctype>
+<html>
+<script src="https://flbulgarelli.github.io/headbreaker/js/headbreaker.js"></script>
+<body>
+<!--  <div id="puzzle"></div>-->
+  <div id="canvas"></div>
+  <script>
+    const canvas = new headbreaker.Canvas('canvas', {
+      proximity: 25,
+      width: 500, height: 800,
+      outline: new headbreaker.outline.Rounded() });
+
+    canvas.sketchPiece({
+      structure: {right: headbreaker.Slot, left: headbreaker.Slot},
+      metadata: {id: 'a', color: '#B87D32'},
+      size: headbreaker.diameter({x: 30, y: 30})
+    });
+
+    canvas.sketchPiece({
+      structure: {right: headbreaker.Tab, left: headbreaker.Tab},
+      metadata: {id: 'a', color: '#B87D32'},
+      size: headbreaker.diameter({x: 30, y: 30})
+    });
+
+    canvas.sketchPiece({
+      structure: {up: headbreaker.Slot, right: headbreaker.Tab, down: headbreaker.Slot, left: headbreaker.Tab},
+      metadata: {id: 'd', color: '#A4C234'},
+      size: headbreaker.diameter({x: 100, y: 30})
+    });
+
+    canvas.sketchPiece({
+      structure: {up: headbreaker.Slot, right: headbreaker.Slot, down: headbreaker.Tab, left: headbreaker.Tab},
+      metadata: {id: 'g', color: '#B83361'},
+      size: headbreaker.diameter({x: 30, y: 100})
+    });
+
+    canvas.sketchPiece({
+      structure: {up: headbreaker.Tab, right: headbreaker.Slot, down: headbreaker.Tab, left: headbreaker.Tab},
+      metadata: {id: 'g', color: '#56b833'},
+      size: headbreaker.diameter({x: 30, y: 100})
+    });
+
+    canvas.sketchPiece({
+      structure: {up: headbreaker.Slot, right: headbreaker.Tab, down: headbreaker.Slot, left: headbreaker.Tab},
+      metadata: {id: 'g', color: '#3368b8'},
+      size: headbreaker.diameter({x: 100, y: 30})
+    });
+
+    canvas.draw();
+  </script>
+</body>
+</html>
